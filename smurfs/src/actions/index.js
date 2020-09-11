@@ -11,7 +11,7 @@ return(dispatch) => {
         dispatch({type: SMURF_LIST});
         axios.get('http://localhost:3333/smurfs')
         .then((res) => {
-            
+            console.log(res)
             dispatch({type: SMURF_LOAD_SUCCESS, payload: res.data})
             console.log('success with axios get')
         })
@@ -22,11 +22,11 @@ return(dispatch) => {
     }   
 }
 
-export const postSmurf = () =>{
+export const postSmurf = (newSmurf) =>{
     return(dispatch) => {
       
             dispatch({type: SMURF_LIST});
-            axios.post('http://localhost:3333/smurfs')
+            axios.post('http://localhost:3333/smurfs', newSmurf)
             .then((res) => {
                 dispatch({type: ADD_SMURF, payload: res.data})
                 

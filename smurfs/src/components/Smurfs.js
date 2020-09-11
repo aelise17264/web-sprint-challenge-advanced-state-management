@@ -3,9 +3,9 @@ import {connect} from 'react-redux';
 import Smurf from './Smurf'
 
 function Smurfs({smurfs}){
-    console.log(smurfs)
+    // console.log(smurfs.smurfs)
     return(
-        <>
+        
         <div className='smurfInfo'>
         {
             smurfs.map((item) => {
@@ -16,12 +16,12 @@ function Smurfs({smurfs}){
         }
 
         </div>
-        </>
+        
     )
 }
 
-function mapStateToProps(state){
-    // console.log(state.smurfs)
+const mapStateToProps = (state) => {
+    console.log(state)
     return{
         smurfs: state.smurfs
     }

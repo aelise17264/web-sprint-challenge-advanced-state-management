@@ -5,13 +5,14 @@ import {getSmurfs} from '../actions/actions';
 import Smurfs from './Smurfs'
 import AddSmurf from './AddSmurf'
 
-class App extends Component{
-render(){
-// function App ({getSmurfs})
-//  {
-//     useEffect(() =>{
-//       getSmurfs();
-//     }, [getSmurfs]);
+// class App extends Component{
+
+// render(){
+function App ({getSmurfs})
+ {
+    useEffect(() =>{
+      getSmurfs();
+    }, [getSmurfs]);
 
     return (
       <div className="App">
@@ -21,11 +22,11 @@ render(){
       </div>
     );
     }
-}
 
-function mapStateToProps(state){
+const mapStateToProps = (state) => {
+  console.log(state)
   return{
-    loadingMessage: state.loadingMessage
+    state
   }
 }
 

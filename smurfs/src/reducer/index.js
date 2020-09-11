@@ -3,10 +3,10 @@ SMURF_LIST,
 SMURF_LOAD_SUCCESS,
 SMURF_LOAD_FAIL,
 ADD_SMURF
-}from '../actions/actions'
+}from '../actions'
 
 export const initialState = {
-    smufs: [],
+    smurfs: [],
     loadingMessage: false,
     errorMessage: ''
 }
