@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import Smurf from './Smurf'
 
 function Smurfs({smurfs}){
-    console.log(smurfs.smurfs)
+    console.log(smurfs)
     return(
         <>
         <div className='smurfInfo'>

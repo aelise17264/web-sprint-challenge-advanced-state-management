@@ -3,24 +3,26 @@ import "./App.css";
 import {connect} from 'react-redux';
 import {getSmurfs} from '../actions';
 import Smurfs from './Smurfs'
+import AddSmurf from './AddSmurf'
 
-function App({getSmurfs, loadingMessage, errorMessage}) {
+class App extends Component{
 
-useEffect(() =>{
-  getSmurfs();
-}, [getSmurfs])
+
+  render(){
+    // useEffect(() =>{
+    //   getSmurfs();
+    // }, [getSmurfs]);
 
     return (
       <div className="App">
         <h1>SMURFS! W/Redux</h1>
-      {!loadingMessage ? <Smurfs/> : <div>...Just a Moment</div>}
-      {errorMessage !== "" ? <div>'{errorMessage}'</div> : null}
-
+      <Smurfs/>
+      <AddSmurf/>
       </div>
     );
   
 }
-
+}
 function mapStateToProps(state){
   return{
     loadingMessage: state.loadingMessage

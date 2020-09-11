@@ -1,7 +1,8 @@
 import{
-    SMURF_LIST,
+SMURF_LIST,
 SMURF_LOAD_SUCCESS,
 SMURF_LOAD_FAIL,
+ADD_SMURF
 }from '../actions'
 
 export const initialState = {
@@ -30,6 +31,13 @@ export default(state = initialState, action) => {
                     loadingMessage: false
                 }    
 
+         case ADD_SMURF:
+             return{
+                 ...state,
+                 smurfs: action.payload,
+                 loadingMessage: false
+             }
+                
         default: return state;
     }
 }
