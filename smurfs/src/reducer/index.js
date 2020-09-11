@@ -3,7 +3,7 @@ SMURF_LIST,
 SMURF_LOAD_SUCCESS,
 SMURF_LOAD_FAIL,
 ADD_SMURF
-}from '../actions'
+}from '../actions/actions'
 
 export const initialState = {
     smufs: [],

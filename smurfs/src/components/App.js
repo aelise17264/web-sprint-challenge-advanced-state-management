@@ -1,17 +1,17 @@
 import React, { Component, useEffect } from "react";
 import "./App.css";
 import {connect} from 'react-redux';
-import {getSmurfs} from '../actions';
+import {getSmurfs} from '../actions/actions';
 import Smurfs from './Smurfs'
 import AddSmurf from './AddSmurf'
 
 class App extends Component{
-
-
-  render(){
-    // useEffect(() =>{
-    //   getSmurfs();
-    // }, [getSmurfs]);
+render(){
+// function App ({getSmurfs})
+//  {
+//     useEffect(() =>{
+//       getSmurfs();
+//     }, [getSmurfs]);
 
     return (
       <div className="App">
@@ -20,9 +20,9 @@ class App extends Component{
       <AddSmurf/>
       </div>
     );
-  
+    }
 }
-}
+
 function mapStateToProps(state){
   return{
     loadingMessage: state.loadingMessage

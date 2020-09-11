@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
-import {postSmurf} from '../actions';
+import {postSmurf} from '../actions/actions';
 import {v4 as uuid} from 'uuid'
 
 const AddSmurf = (props)=>{
