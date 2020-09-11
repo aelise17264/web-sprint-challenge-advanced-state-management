@@ -1,5 +1,11 @@
+import{
+    SMURF_LIST,
+SMURF_LOAD_SUCCESS,
+SMURF_LOAD_FAIL,
+}from '../actions'
+
 export const initialState = {
-    smufs = [],
+    smufs: [],
     loadingMessage: false,
     errorMessage: ''
 }
